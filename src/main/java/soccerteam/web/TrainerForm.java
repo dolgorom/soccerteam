@@ -15,15 +15,15 @@ public class TrainerForm {
 
     @NotNull
     @Size(min=2, max=30, message = "{firstName.size}")
-    @Pattern(regexp="[a-zA-Z]+")
+    @Pattern(regexp="[a-zA-Z-' ]+", message = "{firstName.regex}")
     private String firstName;
     @NotNull
-    @Size(min=2, max=30)
-    @Pattern(regexp="[a-zA-Z]+")
+    @Size(min=2, max=30, message = "{secondName.size}")
+    @Pattern(regexp="[a-zA-Z-' ]+", message = "{secondName.regex}")
     private String secondName;
 
     @NotNull
-    @Min(40)
+    @Min(value=40, message = "{age.min}")
     private int age;
     @Min(value = 10,message = "{salary.size}")
     @NotNull(message = "{salary.notnull}")

@@ -24,8 +24,8 @@ public class PlayerForm {
     @Size(min=2, max=30)
     private String country;
     @NotNull
-    @Max(23)
-    @Min(21)
+    @Max(value=23, message = "{age.max}")
+    @Min(value=21, message = "{age.min}")
     private int age;
     @Min(value = 10000,message = "{salary.size}")
     @NotNull(message = "{salary.notnull}")
