@@ -28,6 +28,6 @@
     </table>
 
     <br/>
-    <a href="/" />Return</a>
+    <button onclick="document.location='/'" />Return</button>
   </body>
 </html>
