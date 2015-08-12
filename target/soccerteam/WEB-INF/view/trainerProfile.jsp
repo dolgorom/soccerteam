@@ -8,10 +8,26 @@
   </head>
   <body>
     <h1>trainer Profile</h1>
+    <table >
+      <tr>
+        <td>First Name:</td>
+        <td><c:out value="${trainer.firstName}" /></td>
+      </tr>
+      <tr>
+        <td>Second name:</td>
+        <td><c:out value="${trainer.secondName}" /></td>
+      </tr>
+      <tr>
+        <td>Age:</td>
+        <td> <c:out value="${trainer.age}" /></td>
+      </tr>
+      <tr>
+        <td>Salary:</td>
+        <td><c:out value="${trainer.salary.amount}" /></td>
+      </tr>
+    </table>
 
-    <c:out value="${trainer.firstName}" /><br/>
-    <c:out value="${trainer.secondName}" /><br/>
-    <c:out value="${trainer.age}" /><br/>
-    <c:out value="${player.salary.amount}" /><br/>
+    <br/>
+    <a href="/" />Return</a>
   </body>
 </html>

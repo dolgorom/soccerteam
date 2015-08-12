@@ -1,8 +1,6 @@
 package soccerteam.web;
 
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.servlet.ModelAndView;
 import soccerteam.data.PlayerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -34,17 +32,17 @@ public class PlayerController {
     @RequestMapping(value="/register",method = GET)
     public String home(Model model) {
 
-        model.addAttribute(new RegisterForm());
-        return "registerForm";
+        model.addAttribute(new PlayerForm());
+        return "playerForm";
     }
 
     @RequestMapping(value="/register",method = POST)
     public String processRegistration(
-                                          @Valid RegisterForm registerForm,
+                                          @Valid PlayerForm registerForm,
             Errors errors) {
         if (errors.hasErrors()) {
             System.out.print("Error in form. returning form");
-            return "registerForm";
+            return "playerForm";
         }
        Player player = registerForm.toPlayer();
         playerRepository.save(player);

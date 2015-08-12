@@ -28,13 +28,13 @@ body {
 	font-size: 8pt;
 }
 
-.soccerteamForm h1 {
+.playerForm h1 {
 	font-size: 16pt;
 }
 
 span.error{
 
-color.red;
+	color:red;
 }
 
 label.error {
@@ -45,7 +45,7 @@ input.error {
 	background-color: #ffcccc;
 }
 
-div.errors {
+div.error {
 	background-color: #ffcccc;
 	border: 2px solid red;
 }

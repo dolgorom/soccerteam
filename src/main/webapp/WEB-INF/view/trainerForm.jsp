@@ -3,23 +3,40 @@
 <%@ page session="false" %>
 <html>
 <head >
-    <title>Create player form</title>
+    <title>Create trainer form</title>
     <link rel="stylesheet" type="text/css" href="<c:url value="/resources/style.css" />" >
 </head>
 <body>
 
 <h2>
-  Create your player here
+  Create your trainer here
 </h2>
 <sf:form method="POST" commandName="trainerForm">
     <sf:errors path="*" element="div" cssClass="error"/>
-  First Name:<sf:input path="firstName" cssErrorClass="error" /><br/>
-  Last Name: <sf:input path="secondName" cssErrorClass="error"/><br/>
-  Age: <sf:input path="age" cssErrorClass="error"/><br/>
-  Salary: <sf:input path="salary" cssErrorClass="error"/><br/>
-
+    <table >
+        <tr>
+            <td>First Name:</td>
+            <td><sf:input path="firstName" cssErrorClass="error"/></td>
+        </tr>
+        <tr>
+            <td>Last Name:</td>
+            <td><sf:input path="secondName" cssErrorClass="error"/></td>
+        </tr>
+        <tr>
+            <td>Age:</td>
+            <td><sf:input path="age" cssErrorClass="error"/></td>
+        </tr>
+        <tr>
+            <td>Salary:</td>
+            <td><sf:input path="salary" cssErrorClass="error"/></td>
+        </tr>
+    </table>
+    <br/>
   <input type="submit" value="Register" />
+
+
 </sf:form>
+<button onclick="document.location='/'" />Cancel</button>
 
 </body>
 </html>

@@ -21,7 +21,7 @@ public class PlayerControllerTest  {
         PlayerController controller = new PlayerController();
         MockMvc mockMvc = standaloneSetup(controller).build();
 
-        mockMvc.perform(get("/player/register")).andExpect(view().name("registerForm"));
+        mockMvc.perform(get("/player/register")).andExpect(view().name("playerForm"));
 
 
     }
@@ -38,5 +38,7 @@ public class PlayerControllerTest  {
 
 
     }
+
+
 
 }

@@ -61,7 +61,8 @@ public class JdbcTrainerRepository implements TrainerRepository {
 
           rs.getString("first_name"),
           rs.getString("last_name"),
-                rs.getInt("age"));
+                rs.getInt("age"),
+                new Salary(new BigDecimal(rs.getDouble("salary"))));
 
         return trainer;
     }

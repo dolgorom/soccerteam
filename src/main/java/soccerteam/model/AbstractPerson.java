@@ -22,7 +22,7 @@ public abstract class AbstractPerson {
 
     @NotNull
     @Size(min=2, max=30)
-    @javax.validation.constraints.Pattern(regexp="[a-zA-Z]+")
+    @javax.validation.constraints.Pattern(regexp="[a-zA-Z\\-']+")
     protected String firstName;
     @NotNull
     @Size(min=2, max=30)
