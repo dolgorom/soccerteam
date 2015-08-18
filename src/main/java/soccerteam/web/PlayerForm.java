@@ -16,27 +16,30 @@ public class PlayerForm {
     @Size(min=2, max=30, message = "{firstName.size}")
     @Pattern(regexp="[a-zA-Z-' ]+", message = "{firstName.regex}")
     private String firstName;
+
     @NotNull
     @Size(min=2, max=30, message = "{secondName.size}")
     @Pattern(regexp="[a-zA-Z-' ]+", message = "{secondName.regex}")
     private String secondName;
+
     @NotNull
     @Size(min=2, max=30)
     private String country;
+
     @NotNull
-    @Max(value=23, message = "{age.max}")
-    @Min(value=21, message = "{age.min}")
+    @Max(value = 23,message = "{age.size.max}")
+    @Min(value = 21,message = "{age.size.min}")
     private int age;
+
     @Min(value = 10000,message = "{salary.size}")
     @NotNull(message = "{salary.notnull}")
     @NumberFormat(style= NumberFormat.Style.CURRENCY)
     private BigDecimal salary;
-    @Min(0)
+
+    @Min(value = 0,message = "{bookings.positive}")
     private int bookings;
 
-
-
-    @Min(0)
+    @Min(value = 0,message = "{goals.positive}")
     private int goals;
 
     private String position;

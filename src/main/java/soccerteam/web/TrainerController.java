@@ -57,13 +57,9 @@ public class TrainerController {
         String firstName = firstAndSecond.split("_")[0];
         String secondName = firstAndSecond.split("_")[1];
         Trainer trainer = trainerRepository.findByFistAndSecondName(firstName,secondName);
-        System.out.print(trainer);
-
 
         model.addAttribute(trainer);
 
-        // return mav;
-        //model.addAttribute(newPlayer);
         return "/trainerProfile";
     }
 

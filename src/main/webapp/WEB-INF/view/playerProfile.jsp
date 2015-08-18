@@ -43,6 +43,6 @@
       </tr>
     </table>
     <br/>
-    <button onclick="document.location='/'" />Return</button>
+    <a href="/" />Return</a>
   </body>
 </html>
